@@ -1,7 +1,7 @@
-'''
+"""
 It is a module used to build and distribute Python packages
-'''
-from conda_build.skeletons.pypi import get_requirements
+"""
+
 from setuptools import find_packages,setup
 
 HYPHEN_E_DOT = '-e .'
@@ -29,7 +29,7 @@ setup(
     packages=find_packages(),
     #install_requires=['pandas','numpy']
     #
-    install_requires = get_requirements(requirements.txt)
+    install_requires = get_requirements('requirements.txt')
 )
 
 
