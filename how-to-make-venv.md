@@ -31,3 +31,11 @@ python -m ipykernel install --name=your-env-name
 
 # (Optional) List available Jupyter kernels
 jupyter kernelspec list
+
+## 🔹 Method 2: conda (Anaconda or Miniconda Environment)
+
+### ✅ Best When:
+- You are doing data science, ML, or scientific computing.
+- You need complex dependencies like TensorFlow, PyTorch, or OpenCV.
+- You want to use a specific Python version (e.g., 3.8).
+- You need better reproducibility and platform independence.
