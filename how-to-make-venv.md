@@ -31,11 +31,42 @@ python -m ipykernel install --name=your-env-name
 
 # (Optional) List available Jupyter kernels
 jupyter kernelspec list
+```
 
-## 🔹 Method 2: conda (Anaconda or Miniconda Environment)
+## 🔹 Method 2: `conda` (Anaconda or Miniconda Environment)
 
 ### ✅ Best When:
 - You are doing data science, ML, or scientific computing.
 - You need complex dependencies like TensorFlow, PyTorch, or OpenCV.
 - You want to use a specific Python version (e.g., 3.8).
 - You need better reproducibility and platform independence.
+
+### ⚙️ Setup Steps:
+```bash
+# Create a conda environment at a custom path with Python 3.8
+conda create -p ./venv python=3.8 -y
+
+# Activate the conda environment
+conda activate ./venv
+
+# (Optional) Install Jupyter kernel support
+pip install ipykernel
+python -m ipykernel install --name=venv
+
+# (Optional) Export the environment to a file
+conda env export > environment.yml
+```
+
+## 📊 Summary Comparison Table
+
+| Feature                      | `venv`                              | `conda`                               |
+|-----------------------------|-------------------------------------|---------------------------------------|
+| **Toolchain**               | Built-in (Python ≥ 3.3)             | Requires Anaconda or Miniconda        |
+| **Package Manager**         | `pip`                               | `conda` (and `pip`)                   |
+| **Python Version Management** | Manual                            | Easy (`python=3.8`, etc.)             |
+| **Handles Non-Python Deps** | ❌ No                               | ✅ Yes                                 |
+| **Suitable For**            | Simple Python apps/scripts          | Data Science, ML, SciPy, TensorFlow   |
+| **Environment Size**        | Small                               | Large                                 |
+| **Environment Creation Speed** | Fast                            | Slower (but more stable for deps)     |
+| **Reproducibility**         | Basic                               | Strong (`environment.yml`)            |
+| **System Library Support**  | Weak                                | Strong                                |
