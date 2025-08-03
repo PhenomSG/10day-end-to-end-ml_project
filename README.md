@@ -8,6 +8,8 @@
    (d) requirements.txt
 
 ## Agenda [02-07-2025]
+1. Data Ingestion (Reading data from docs)
+
 ## Agenda [03-07-2025]
 ## Agenda [04-07-2025]
 ## Agenda [05-07-2025]
