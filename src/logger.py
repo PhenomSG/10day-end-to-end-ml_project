@@ -21,8 +21,8 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-# Example usage
-logging.info("Logging system initialized successfully.")
+if __name__ == "__main__":
+    logging.info("Logging system initialized successfully.")
 
 
 
